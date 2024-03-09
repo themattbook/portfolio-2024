@@ -143,6 +143,18 @@ section {
 	border-radius: 5px;
 }
 
+.error-page {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	margin-top: 6rem;
+}
+
+.nerd-stuff {
+	border: var(--border-dark);
+	padding: 5px;
+}
+
 @media (prefers-color-scheme: light) {
 	:root {
 		color: var(--color-light);
@@ -151,5 +163,8 @@ section {
 	}
 	.navbar {
 		background-color: var(--background-light);
+	}
+	.nerd-stuff {
+		border: var(--border-light);
 	}
 }
