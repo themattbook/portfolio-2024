@@ -1,0 +1,155 @@
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Rubik:ital,wght@0,400..700;1,400..700&&display=swap");
+
+:root {
+	font-family: "Rubik", sans-serif;
+	font-optical-sizing: auto;
+	font-style: normal;
+	font-weight: 400;
+	line-height: 1.5;
+
+	color-scheme: light dark;
+
+	--color-light: #121212;
+	--background-light: #ffffff;
+	--color-dark: #ffffff;
+	--background-dark: #121212;
+	--brand-bg: #6d2b93;
+	--link-color: #65a30d;
+
+	--default-border-size: 0.4px;
+
+	--border-light: var(--default-border-size) solid #121212;
+	--border-dark: var(--default-border-size) solid #ffffff;
+
+	--gradient-color: linear-gradient(-45deg, #0d9488, #65a30d);
+
+	color: var(--color-dark);
+	background-color: var(--background-dark);
+
+	font-synthesis: none;
+	text-rendering: optimizeLegibility;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+/* CSS Reset */
+*,
+*::before,
+*::after {
+	padding: 0;
+	margin: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+	font-family: "Outfit", sans-serif;
+}
+
+h1 {
+	font-size: 2.6em;
+	line-height: 1.1;
+}
+
+a,
+a:visited,
+a:hover,
+a:active {
+	text-decoration: underline;
+	font-weight: 500;
+	color: var(--link-color);
+}
+
+.container {
+	width: 40em;
+	margin: auto;
+}
+
+.gradient {
+	background: var(--gradient-color);
+	background-clip: text;
+	fill: transparent;
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+
+.navbar {
+	position: fixed;
+	top: 0;
+	height: 3rem;
+	display: flex;
+	align-items: center;
+	width: 43.5em;
+	background-color: var(--background-dark);
+}
+
+.navbar-left {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-weight: bold;
+	height: 2rem;
+	width: 2rem;
+	background: var(--gradient-color);
+	color: var(--color-dark);
+}
+
+.navbar-right {
+	display: flex;
+	align-items: center;
+	margin-left: auto;
+}
+
+.navbar-right ul {
+	list-style: none;
+	padding: 0;
+	display: flex;
+	align-items: center;
+}
+
+.navbar-right li {
+	margin-inline: 0.5rem;
+}
+
+.navbar-right li:hover {
+	cursor: pointer;
+	font-weight: bold;
+}
+
+main {
+	padding-top: 10rem;
+}
+
+section {
+	padding-top: 3rem;
+}
+
+.intro > * {
+	margin-block: 1rem;
+}
+
+.project-card {
+	display: flex;
+	align-items: center;
+	margin-block: 1rem;
+	font-size: 0.85rem;
+}
+
+.project-image {
+	max-width: 300px;
+	margin-right: 2rem;
+	border-radius: 5px;
+}
+
+@media (prefers-color-scheme: light) {
+	:root {
+		color: var(--color-light);
+		background-color: var(--background-light);
+		--brand-bg: #2b5893;
+	}
+	.navbar {
+		background-color: var(--background-light);
+	}
+}
