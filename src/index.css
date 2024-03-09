@@ -94,6 +94,7 @@ a:active {
 	width: 2rem;
 	background: var(--gradient-color);
 	color: var(--color-dark);
+	cursor: pointer;
 }
 
 .navbar-right {
@@ -134,13 +135,20 @@ section {
 	display: flex;
 	align-items: center;
 	margin-block: 1rem;
-	font-size: 0.85rem;
 }
 
 .project-image {
 	max-width: 300px;
 	margin-right: 2rem;
 	border-radius: 5px;
+}
+
+.project-desc {
+	font-size: 0.85rem;
+}
+
+.project-readmore {
+	margin-block: 1rem;
 }
 
 .error-page {
