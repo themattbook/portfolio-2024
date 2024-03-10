@@ -17,6 +17,10 @@ const router = createBrowserRouter([
 		path: "/projects/:projectId",
 		element: <ProjectDetail />,
 	},
+	{
+		path: "/profile",
+		element: <ProjectDetail />,
+	},
 ]);
 
 ReactDOM.createRoot(document.getElementById("root")).render(
