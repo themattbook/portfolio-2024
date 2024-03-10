@@ -1,0 +1,42 @@
+[
+	{
+		"id": "dfnx",
+		"name": "Digital Freight Network",
+		"images": [
+			"https://images.unsplash.com/photo-1531297484001-80022131f5a1?q=80&w=2240",
+			"https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?q=80&w=2340",
+			"https://images.unsplash.com/photo-1517433456452-f9633a875f6f?q=80&w=2232"
+		],
+		"description": "I was hired by DFN Freight to build a digital logistics application that could handle all of the legwork between a carrier and a shipper. I started as the only dev, laying the groundwork that propelled the app to MVP.",
+		"tech_used": [
+			"TypeScript",
+			"Vue",
+			"Tailwindcss",
+			"JSON-Server",
+			"CI/CD",
+			"Amazon EB",
+			"Amazon Cognito",
+			"Bitbucket"
+		]
+	},
+	{
+		"id": "tornadotrax",
+		"name": "Tornado Trax",
+		"images": [
+			"https://images.unsplash.com/photo-1503437313881-503a91226402?q=80&w=2232",
+			"https://images.unsplash.com/photo-1505740420928-5e560c06d30e?q=80&w=2340",
+			"https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=2344"
+		],
+		"description": "As a hobby meterologist, Tornadoes are of a particular interest of mine. I wanted to build an interactive app that visualizes tornado paths using NOAA weather data. This is an ongoing project.",
+		"tech_used": [
+			"TypeScript",
+			"Vue",
+			"Tailwindcss",
+			"JSON-Server",
+			"CI/CD",
+			"Amazon EB",
+			"Amazon Cognito",
+			"Bitbucket"
+		]
+	}
+]

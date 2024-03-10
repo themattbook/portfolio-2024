@@ -64,7 +64,7 @@ export default function Root() {
 							NOAA weather data. This is an ongoing project.
 						</p>
 						<p className='project-readmore'>
-							<a href=''>Read more &rarr;</a>
+							<a href='/projects/tornadotrax'>Read more &rarr;</a>
 						</p>
 					</div>
 				</div>
