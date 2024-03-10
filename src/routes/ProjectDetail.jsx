@@ -16,28 +16,27 @@ export default function ProjectDetail() {
 	return (
 		<main>
 			<div className='intro'>
-				<h1 className='gradient'>{project.name}</h1>
-				<div>
-					{project.images.map((image, index) => (
-						<img
-							key={index}
-							src={image}
-							alt={`${project.name} ${index + 1}`}
-							style={{
-								width: "100%",
-								maxWidth: "600px",
-								marginBottom: "20px",
-							}}
-						/>
-					))}
+				<img src={project.featuredImage} className='featured-image' />
+				<h1>{project.name}</h1>
+				<div className='project-meta'>
+					<p>
+						<strong>Role: </strong>
+						{project.role}
+					</p>
+					<p>
+						<strong>Year: </strong>
+						{project.year}
+					</p>
 				</div>
 				<p>{project.description}</p>
 				<h3>Technologies Used</h3>
-				<ul>
+				<div className='project-tech-used'>
 					{project.tech_used.map((tech, index) => (
-						<li key={index}>{tech}</li>
+						<div key={index} className='project-tech-item'>
+							{tech}
+						</div>
 					))}
-				</ul>
+				</div>
 			</div>
 		</main>
 	);

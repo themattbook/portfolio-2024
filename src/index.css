@@ -163,6 +163,31 @@ section {
 	padding: 5px;
 }
 
+/* Project Pages */
+.featured-image {
+	max-width: 43.5rem;
+}
+
+.project-meta {
+	font-size: 0.9rem;
+}
+
+.project-tech-used {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+}
+
+.project-tech-item {
+	background: var(--link-color);
+	padding: 6px;
+	border-radius: 4px;
+	margin-right: 1rem;
+	margin-block: 0.5rem;
+	color: #fff;
+	font-size: 0.85rem;
+}
+
 @media (prefers-color-scheme: light) {
 	:root {
 		color: var(--color-light);

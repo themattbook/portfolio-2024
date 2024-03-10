@@ -2,6 +2,10 @@
 	{
 		"id": "dfnx",
 		"name": "Digital Freight Network",
+		"role": "FullStack Developer",
+		"year": "2022-2023",
+		"featuredImage": "https://images.unsplash.com/photo-1531297484001-80022131f5a1?q=80&w=2240",
+
 		"images": [
 			"https://images.unsplash.com/photo-1531297484001-80022131f5a1?q=80&w=2240",
 			"https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?q=80&w=2340",
@@ -17,11 +21,16 @@
 			"Amazon EB",
 			"Amazon Cognito",
 			"Bitbucket"
-		]
+		],
+		"github_url": "",
+		"demo_url": "https://www.dfnfreight.com/"
 	},
 	{
 		"id": "tornadotrax",
 		"name": "Tornado Trax",
+		"role": "Lead Developer",
+		"year": "2023-2024",
+		"featuredImage": "https://images.unsplash.com/photo-1503437313881-503a91226402?q=80&w=2232",
 		"images": [
 			"https://images.unsplash.com/photo-1503437313881-503a91226402?q=80&w=2232",
 			"https://images.unsplash.com/photo-1505740420928-5e560c06d30e?q=80&w=2340",
@@ -37,6 +46,8 @@
 			"Amazon EB",
 			"Amazon Cognito",
 			"Bitbucket"
-		]
+		],
+		"github_url": "https://github.com/themattbook/tornadotrax",
+		"demo_url": "https://tornadotrax.vercel.app"
 	}
 ]
