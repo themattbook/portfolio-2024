@@ -52,7 +52,7 @@ export default function Root() {
 				</div>
 				<div className='project-card'>
 					<img
-						src='/project-images/tornado-trax-mockup.webp'
+						src='/project-images/tornado-trax-mockup2.webp'
 						className='project-image'
 					/>
 					<div className='project-desc'>
