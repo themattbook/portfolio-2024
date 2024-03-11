@@ -52,7 +52,7 @@ export default function Root() {
 				</div>
 				<div className='project-card'>
 					<img
-						src='/project-images/tornado-trax-mockup2.webp'
+						src='/project-images/tornado-trax-mockup.webp'
 						className='project-image'
 					/>
 					<div className='project-desc'>
@@ -99,8 +99,7 @@ export default function Root() {
 							apps, but this one was made to pick up where other
 							apps I&apos;ve seen fall short. When I check the
 							weather, I also want to be able to see active
-							weather alerts. I also don&apos;t want a lot of
-							distractions. Just give me the data. This is it.
+							weather alerts. This is it.
 						</p>
 						<p className='project-readmore'>
 							<a href=''>Read more &rarr;</a>

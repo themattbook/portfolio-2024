@@ -14,7 +14,8 @@
 	--color-dark: #ffffff;
 	--background-dark: #121212;
 	--brand-bg: #6d2b93;
-	--link-color: #65a30d;
+	--link-color-dark: #121212;
+	--link-color-light: #ffffff;
 
 	--default-border-size: 0.4px;
 
@@ -179,12 +180,12 @@ section {
 }
 
 .project-tech-item {
-	background: var(--link-color);
+	background: var(--link-color-light);
 	padding: 6px;
 	border-radius: 4px;
 	margin-right: 1rem;
 	margin-block: 0.5rem;
-	color: #fff;
+	color: var(--color-light);
 	font-size: 0.85rem;
 }
 
@@ -193,6 +194,12 @@ section {
 		color: var(--color-light);
 		background-color: var(--background-light);
 		--brand-bg: #2b5893;
+	}
+	a,
+	a:visited,
+	a:hover,
+	a:active {
+		color: var(--link-color-light);
 	}
 	.navbar {
 		background-color: var(--background-light);
