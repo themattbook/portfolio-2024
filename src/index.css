@@ -14,8 +14,8 @@
 	--color-dark: #ffffff;
 	--background-dark: #121212;
 	--brand-bg: #6d2b93;
-	--link-color-dark: #121212;
-	--link-color-light: #ffffff;
+	--link-color-light: #121212;
+	--link-color-dark: #ffffff;
 
 	--default-border-size: 0.4px;
 
@@ -60,7 +60,7 @@ a:hover,
 a:active {
 	text-decoration: underline;
 	font-weight: 500;
-	color: var(--link-color);
+	color: var(--link-color-dark);
 }
 
 .container {
