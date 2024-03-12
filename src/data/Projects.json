@@ -37,6 +37,7 @@
 			"https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=2344"
 		],
 		"description": "As a hobby meterologist, Tornadoes are of a particular interest of mine. I wanted to build an interactive app that visualizes tornado paths using NOAA weather data. This is an ongoing project.",
+		"full_desc": "<p>I originally set out to design this application as a way to keep my code skills fresh having come off of a contract with my previous employer. I have always been passionate about the weather, tornadoes especially, and figured it would be neat to visualize the paths of prolific tornadoes.</p><p>I knew displaying the data would merely be a matter of trial and error until I found something that was useful and visually appealing, but where to source the data? I searched around and found the NOAA's Storm Prediction Center kept an archive of every tornado event from 1955-2022. That would do for now.</p>",
 		"tech_used": [
 			"TypeScript",
 			"Vue",

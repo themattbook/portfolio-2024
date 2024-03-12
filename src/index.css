@@ -61,6 +61,12 @@ a:active {
 	text-decoration: underline;
 	font-weight: 500;
 	color: var(--link-color-dark);
+	transition: font-weight 0.5s ease-in-out;
+}
+
+a:hover {
+	font-weight: 700;
+	transition: font-weight 0.5s ease-in-out;
 }
 
 .container {
@@ -98,10 +104,31 @@ a:active {
 	cursor: pointer;
 }
 
+.navbar-left > a,
+.navbar-left > a:visited,
+.navbar-left > a:active,
+.navbar-left > a:hover {
+	color: var(--color-dark);
+	text-decoration: none;
+}
+
 .navbar-right {
 	display: flex;
 	align-items: center;
 	margin-left: auto;
+}
+
+.navbar-right li > a,
+.navbar-right li > a:visited,
+.navbar-right li > a:hover,
+.navbar-right li > a:active {
+	font-weight: normal;
+	text-decoration: none;
+	cursor: pointer;
+}
+
+.navbar-right li > a:hover {
+	font-weight: bold;
 }
 
 .navbar-right ul {
@@ -180,13 +207,13 @@ section {
 }
 
 .project-tech-item {
-	background: var(--link-color-light);
+	background: var(--background-light);
 	padding: 6px;
 	border-radius: 4px;
 	margin-right: 1rem;
 	margin-block: 0.5rem;
 	color: var(--color-light);
-	font-size: 0.85rem;
+	font-size: 0.8rem;
 }
 
 @media (prefers-color-scheme: light) {
@@ -206,5 +233,9 @@ section {
 	}
 	.nerd-stuff {
 		border: var(--border-light);
+	}
+	.project-tech-item {
+		background: var(--background-dark);
+		color: var(--color-dark);
 	}
 }
