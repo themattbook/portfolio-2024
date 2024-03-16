@@ -1,3 +1,5 @@
+import { FaLinkedin, FaGithubSquare, FaCodepen } from "react-icons/fa";
+
 export default function Navbar() {
 	return (
 		<div className='navbar'>
@@ -6,16 +8,30 @@ export default function Navbar() {
 			</div>
 			<div className='navbar-right'>
 				<ul>
-					<li>Resume</li>
 					<li>
 						<a
 							href='https://github.com/themattbook'
 							target='_blank'
 						>
-							Github
+							<FaLinkedin size={"20px"} />
 						</a>
 					</li>
-					<li>Contact</li>
+					<li>
+						<a
+							href='https://github.com/themattbook'
+							target='_blank'
+						>
+							<FaGithubSquare size={"20px"} />
+						</a>
+					</li>
+					<li>
+						<a
+							href='https://github.com/themattbook'
+							target='_blank'
+						>
+							<FaCodepen size={"20px"} />
+						</a>
+					</li>
 				</ul>
 			</div>
 		</div>

@@ -4,7 +4,25 @@ import { documentToReactComponents } from "@contentful/rich-text-react-renderer"
 export default function ProjectDetail() {
 	const location = useLocation();
 	const project = location.state.project;
-	const fullDesc = project.fields.description;
+
+	// Assuming `richText` is the rich text data from Contentful
+	const richText = project.fields.description; // Your rich text field
+
+	const options = {
+		renderNode: {
+			// Handling embedded asset blocks (e.g., images)
+			"embedded-asset-block": (node) => {
+				// Accessing the image URL and other details
+				const { url } = node.data.target.fields.file;
+				const { title, description } = node.data.target.fields;
+				return <img src={url} alt={description || title} />;
+			},
+		},
+	};
+
+	const RichTextContent = ({ richText }) => {
+		return documentToReactComponents(richText, options);
+	};
 
 	if (!project) {
 		return (
@@ -50,8 +68,8 @@ export default function ProjectDetail() {
 					<em>{project.fields.intro}</em>
 				</p>
 				<h3>The Project</h3>
-				<div className='intro'>
-					{documentToReactComponents(fullDesc)}
+				<div className='project-text'>
+					{RichTextContent({ richText })}
 				</div>
 				<h3>Technologies Used</h3>
 				<div className='project-tech-used'>

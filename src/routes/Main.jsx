@@ -42,9 +42,6 @@ export default function Root() {
 					<p>
 						<a href=''>Download Resume (.pdf)</a>
 					</p>
-					<p>
-						<a href=''>Download Resume (.docx)</a>
-					</p>
 				</div>
 			</main>
 			<section>

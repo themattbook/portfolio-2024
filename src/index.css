@@ -144,7 +144,6 @@ a:hover {
 
 .navbar-right li:hover {
 	cursor: pointer;
-	font-weight: bold;
 }
 
 main {
@@ -173,6 +172,16 @@ section {
 
 .project-desc {
 	font-size: 0.85rem;
+}
+
+.project-text > * {
+	margin-block: 1rem;
+}
+
+.project-text img {
+	max-width: 100%;
+	display: block;
+	margin-inline: auto;
 }
 
 .project-readmore {
