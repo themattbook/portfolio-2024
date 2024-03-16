@@ -1,8 +1,8 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import Root from "./routes/Root.jsx";
 import ProjectDetail from "./routes/ProjectDetail.jsx";
+import Main from "./routes/Main.jsx";
 import Navbar from "./components/Navbar.jsx";
 import ErrorPage from "./components/ErrorPage.jsx";
 import "./index.css";
@@ -10,7 +10,7 @@ import "./index.css";
 const router = createBrowserRouter([
 	{
 		path: "/",
-		element: <Root />,
+		element: <Main />,
 		errorElement: <ErrorPage />,
 	},
 	{
