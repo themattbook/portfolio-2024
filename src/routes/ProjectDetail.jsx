@@ -1,11 +1,10 @@
-import { useParams } from "react-router-dom";
-import projects from "../data/Projects.json";
-import DOMPurify from "dompurify";
+import { useLocation } from "react-router-dom";
+import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
 
 export default function ProjectDetail() {
-	const { projectId } = useParams();
-	const project = projects.find((p) => p.id === projectId);
-	const santizedHTMLDescription = project.full_desc;
+	const location = useLocation();
+	const project = location.state.project;
+	const fullDesc = project.fields.description;
 
 	if (!project) {
 		return (
@@ -18,43 +17,45 @@ export default function ProjectDetail() {
 	return (
 		<main>
 			<div className='intro'>
-				<img src={project.featuredImage} className='featured-image' />
-				<h1>{project.name}</h1>
+				<img
+					src={project.fields.featuredImage.fields.file.url}
+					className='featured-image'
+				/>
+				<h1>{project.fields.name}</h1>
 				<div className='project-meta'>
 					<p>
 						<strong>Role: </strong>
-						{project.role}
+						{project.fields.role}
 					</p>
 					<p>
 						<strong>Year: </strong>
-						{project.year}
+						{project.fields.year}
 					</p>
-					<p>
-						<strong>Code: </strong>
-						<a href={project.github_url} target='_blank'>
-							{project.github_url}
-						</a>
-					</p>
+					{project.fields.githubUrl ? (
+						<p>
+							<strong>Code: </strong>
+							<a href={project.fields.githubUrl} target='_blank'>
+								{project.fields.githubUrl}
+							</a>
+						</p>
+					) : null}
 					<p>
 						<strong>Demo: </strong>
-						<a href={project.demo_url} target='_blank'>
-							{project.demo_url}
+						<a href={project.fields.demoUrl} target='_blank'>
+							{project.fields.demoUrl}
 						</a>
 					</p>
 				</div>
 				<p>
-					<em>{project.description}</em>
+					<em>{project.fields.intro}</em>
 				</p>
-				<h3>Introduction</h3>
-				<div
-					className='intro'
-					dangerouslySetInnerHTML={{
-						__html: DOMPurify.sanitize(santizedHTMLDescription),
-					}}
-				></div>
+				<h3>The Project</h3>
+				<div className='intro'>
+					{documentToReactComponents(fullDesc)}
+				</div>
 				<h3>Technologies Used</h3>
 				<div className='project-tech-used'>
-					{project.tech_used.map((tech, index) => (
+					{project.fields.techUsed.map((tech, index) => (
 						<div key={index} className='project-tech-item'>
 							{tech}
 						</div>

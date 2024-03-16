@@ -1,4 +1,24 @@
+import { useState, useEffect } from "react";
+import { createClient } from "contentful";
+import { Link } from "react-router-dom";
 export default function Root() {
+	const [projects, setProjects] = useState([]);
+
+	useEffect(() => {
+		const client = createClient({
+			space: import.meta.env.VITE_SPACE_ID,
+			accessToken: import.meta.env.VITE_CONTENT_DELIVERY_ACCESS_TOKEN,
+		});
+
+		client
+			.getEntries({
+				content_type: Object,
+			})
+			.then((response) => {
+				setProjects(response.items);
+			})
+			.catch(console.error);
+	});
 	return (
 		<>
 			<main>
@@ -9,14 +29,12 @@ export default function Root() {
 						<span className='gradient'>useful applications.</span>
 					</h1>
 					<p>
-						My name is Matt and I&apos;m a full-stack developer
-						based out of Davenport, Iowa. I&apos;m currently working
-						at OpenTeknik, the company responsible for Open Source
-						Social Network. I&apos;ve been writing code for over ten
-						years, focusing on Javascript frameworks like React and
-						Vue. I&apos;ve got a lot to learn yet and have enjoyed
-						the journey thus far; looking forward to where
-						opportunity takes me.
+						My name is Aron and I&apos;m a FullStack Developer based
+						out of Schaumberg, Illinois. I&apos;m one of the
+						maintainers of the Open Source Social Network and have
+						worked with a myriad of notable companies. I&apos;ve
+						been writing code for over fifteen years, focusing on
+						Javascript frameworks like React and Vue.
 					</p>
 					<p>
 						<a href=''>My profile &rarr;</a>
@@ -31,81 +49,30 @@ export default function Root() {
 			</main>
 			<section>
 				<h2>Selected Projects</h2>
-				<div className='project-card'>
-					<img
-						src='/project-images/dfnx-mockup.webp'
-						className='project-image'
-					/>
-					<div className='project-desc'>
-						<h3>Digital Freight Network</h3>
-						<p>
-							I was hired by DFN Freight to build a digital
-							logistics application that could handle all of the
-							legwork between a carrier and a shipper. I started
-							as the only dev, laying the groundwork that
-							propelled the app to MVP.
-						</p>
-						<p className='project-readmore'>
-							<a href=''>Read more &rarr;</a>
-						</p>
+				{projects.map((project, index) => (
+					<div key={index}>
+						<div className='project-card'>
+							<img
+								src={
+									project.fields.featuredImage.fields.file.url
+								}
+								className='project-image'
+							/>
+							<div className='project-desc'>
+								<h3>{project.fields.name}</h3>
+								<p>{project.fields.intro}</p>
+								<p className='project-readmore'>
+									<Link
+										to={`/projects/${project.fields.slug}`}
+										state={{ project }}
+									>
+										Read More &rarr;
+									</Link>
+								</p>
+							</div>
+						</div>
 					</div>
-				</div>
-				<div className='project-card'>
-					<img
-						src='/project-images/tornado-trax-mockup.webp'
-						className='project-image'
-					/>
-					<div className='project-desc'>
-						<h3>Tornado Trax</h3>
-						<p>
-							As a hobby meterologist, Tornadoes are of a
-							particular interest of mine. I wanted to build an
-							interactive app that visualizes tornado paths using
-							NOAA weather data. This is an ongoing project.
-						</p>
-						<p className='project-readmore'>
-							<a href='/projects/tornadotrax'>Read more &rarr;</a>
-						</p>
-					</div>
-				</div>
-				<div className='project-card'>
-					<img
-						src='/project-images/recipe-finder-mockup.webp'
-						className='project-image'
-					/>
-					<div className='project-desc'>
-						<h3>What&apos;s In The Fridge?</h3>
-						<p>
-							As a husband and father, I know all too well the
-							struggles of coming up with ideas for dinner. Since
-							recipe apps are a dime-a-dozen, I wanted an app that
-							takes the ingredients I already have on hand and
-							gives me recipe ideas.
-						</p>
-						<p className='project-readmore'>
-							<a href=''>Read more &rarr;</a>
-						</p>
-					</div>
-				</div>
-				<div className='project-card'>
-					<img
-						src='/project-images/weather-app-mockup.webp'
-						className='project-image'
-					/>
-					<div className='project-desc'>
-						<h3>Forecast and Alerts</h3>
-						<p>
-							Hear me out. I know I just talked about dime-a-dozen
-							apps, but this one was made to pick up where other
-							apps I&apos;ve seen fall short. When I check the
-							weather, I also want to be able to see active
-							weather alerts. This is it.
-						</p>
-						<p className='project-readmore'>
-							<a href=''>Read more &rarr;</a>
-						</p>
-					</div>
-				</div>
+				))}
 			</section>
 		</>
 	);

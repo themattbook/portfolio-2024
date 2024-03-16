@@ -2,7 +2,7 @@ export default function Navbar() {
 	return (
 		<div className='navbar'>
 			<div className='navbar-left'>
-				<a href='/'>MS</a>
+				<a href='/'>&#47;&#47;</a>
 			</div>
 			<div className='navbar-right'>
 				<ul>
