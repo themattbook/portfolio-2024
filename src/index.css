@@ -39,6 +39,7 @@
 *::after {
 	padding: 0;
 	margin: 0;
+	box-sizing: border-box;
 }
 
 h1,
@@ -223,6 +224,38 @@ section {
 	margin-block: 0.5rem;
 	color: var(--color-light);
 	font-size: 0.8rem;
+}
+
+@media screen and (max-width: 768px) {
+	:root {
+		font-size: 0.8rem;
+	}
+	.container,
+	.navbar {
+		max-width: 95vw;
+		margin: 0;
+	}
+
+	.container {
+		padding: 1rem;
+	}
+
+	.featured-image {
+		max-width: 100%;
+		margin: auto;
+		display: block;
+		margin-inline: auto;
+	}
+
+	.project-image {
+		max-width: 50%;
+	}
+
+	.project-text img {
+		max-width: 100%;
+		display: block;
+		margin-inline: auto;
+	}
 }
 
 @media (prefers-color-scheme: light) {
