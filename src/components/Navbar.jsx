@@ -10,7 +10,7 @@ export default function Navbar() {
 				<ul>
 					<li>
 						<a
-							href='https://github.com/themattbook'
+							href='https://linkedin.com/in/aronjs'
 							target='_blank'
 						>
 							<FaLinkedin size={"20px"} />
@@ -26,7 +26,7 @@ export default function Navbar() {
 					</li>
 					<li>
 						<a
-							href='https://github.com/themattbook'
+							href='https://codepen.io/asyncawaiting'
 							target='_blank'
 						>
 							<FaCodepen size={"20px"} />
