@@ -1,4 +1,9 @@
-import { FaLinkedin, FaGithubSquare, FaCodepen } from "react-icons/fa";
+import {
+	FaLinkedin,
+	FaGithubSquare,
+	FaInstagram,
+	FaTwitterSquare,
+} from "react-icons/fa";
 
 export default function Navbar() {
 	return (
@@ -26,10 +31,18 @@ export default function Navbar() {
 					</li>
 					<li>
 						<a
-							href='https://codepen.io/asyncawaiting'
+							href='https://instagram.com/codesandwich'
 							target='_blank'
 						>
-							<FaCodepen size={"20px"} />
+							<FaInstagram size={"20px"} />
+						</a>
+					</li>
+					<li>
+						<a
+							href='https://twitter.com/asyncawaited'
+							target='_blank'
+						>
+							<FaTwitterSquare size={"20px"} />
 						</a>
 					</li>
 				</ul>
