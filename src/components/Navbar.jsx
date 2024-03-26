@@ -28,7 +28,7 @@ export default function Navbar() {
 					</li>
 					<li>
 						<a
-							href='https://instagram.com/codesandwich'
+							href='https://instagram.com/asyncawaited'
 							target='_blank'
 						>
 							<FaInstagram size={"20px"} />
