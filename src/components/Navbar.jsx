@@ -22,10 +22,7 @@ export default function Navbar() {
 						</a>
 					</li>
 					<li>
-						<a
-							href='https://github.com/themattbook'
-							target='_blank'
-						>
+						<a href='https://github.com/nodesleep' target='_blank'>
 							<FaGithubSquare size={"20px"} />
 						</a>
 					</li>
