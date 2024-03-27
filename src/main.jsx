@@ -4,6 +4,7 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import ProjectDetail from "./routes/ProjectDetail.jsx";
 import Main from "./routes/Main.jsx";
 import Navbar from "./components/Navbar.jsx";
+import Profile from "./routes/Profile.jsx";
 import ErrorPage from "./components/ErrorPage.jsx";
 import "./index.css";
 
@@ -19,7 +20,7 @@ const router = createBrowserRouter([
 	},
 	{
 		path: "/profile",
-		element: <ProjectDetail />,
+		element: <Profile />,
 	},
 ]);
 

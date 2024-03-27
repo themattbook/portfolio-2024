@@ -5,14 +5,11 @@ export default function ProjectDetail() {
 	const location = useLocation();
 	const project = location.state.project;
 
-	// Assuming `richText` is the rich text data from Contentful
-	const richText = project.fields.description; // Your rich text field
+	const richText = project.fields.description;
 
 	const options = {
 		renderNode: {
-			// Handling embedded asset blocks (e.g., images)
 			"embedded-asset-block": (node) => {
-				// Accessing the image URL and other details
 				const { url } = node.data.target.fields.file;
 				const { title, description } = node.data.target.fields;
 				return <img src={url} alt={description || title} />;

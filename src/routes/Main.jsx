@@ -37,10 +37,7 @@ export default function Root() {
 						Javascript frameworks like React and Vue.
 					</p>
 					<p>
-						<a href=''>My profile &rarr;</a>
-					</p>
-					<p>
-						<a href=''>Download Resume (.pdf)</a>
+						<Link to='/profile'>My profile &rarr;</Link>
 					</p>
 				</div>
 			</main>
